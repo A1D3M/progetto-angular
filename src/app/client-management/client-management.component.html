@@ -1,39 +1,43 @@
 <div class="client-management container mt-5">
-    <h2 class="text-center">Gestione dei Clienti</h2>
-  
-    <form (ngSubmit)="addClient()" class="mb-4">
-      <div class="mb-3">
-        <input type="text" [(ngModel)]="newClient.name" name="name" class="form-control" placeholder="Nome" required />
-      </div>
-      <div class="mb-3">
-        <input type="email" [(ngModel)]="newClient.email" name="email" class="form-control" placeholder="Email" required />
-      </div>
-      <button type="submit" class="btn btn-primary">Aggiungi Cliente</button>
-    </form>
-  
+  <h2 class="text-center">Gestione dei Clienti</h2>
 
-    <div *ngFor="let client of clients" class="border p-3 mb-2 rounded bg-light">
-      <div *ngIf="editingClient?.id !== client.id">
-        <p>-----</p>
-        <p><strong>Nome:</strong> {{ client.name }}</p>
-        <p><strong>Email:</strong> {{ client.email }}</p>
-        <button class="btn btn-warning" (click)="editClient(client)">Aggiorna</button>
-        <button class="btn btn-danger" (click)="deleteClient(client.id)">Elimina</button>
+  <form (ngSubmit)="addClient()" class="mb-4">
+    <div class="mb-3">
+      <label for="client-name">Nome:</label>
+      <input type="text" id="client-name" [(ngModel)]="newClient.name" name="name" class="form-control" placeholder="Nome" required />
+    </div>
+    <div class="mb-3">
+      <label for="client-email">Email:</label>
+      <input type="email" id="client-email" [(ngModel)]="newClient.email" name="email" class="form-control" placeholder="Email" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Aggiungi Cliente</button>
+  </form>
+
+
+  <div *ngFor="let client of clients" class="border p-3 mb-2 rounded bg-light">
+    <div *ngIf="editingClient?.id !== client.id">
+      <p>-----</p>
+      <p><strong>Nome:</strong> {{ client.name }}</p>
+      <p><strong>Email:</strong> {{ client.email }}</p>
+      <button class="btn btn-warning" (click)="editClient(client)">Aggiorna</button>
+      <button class="btn btn-danger" (click)="deleteClient(client.id)">Elimina</button>
+    </div>
+
+    <div *ngIf="editingClient?.id === client.id">
+      <div class="mb-3">
+          <label for="edit-name">Modifica Nome:</label>
+          <input id="edit-name" [(ngModel)]="editingClient.name" class="form-control" placeholder="Modifica Nome" />
       </div>
-  
-      <div *ngIf="editingClient?.id === client.id">
-        <div class="mb-3">
-            <input [(ngModel)]="editingClient.name" class="form-control" placeholder="Modifica Nome" />
-        </div>
-        <div class="mb-3">
-            <input [(ngModel)]="editingClient.email" class="form-control" placeholder="Modifica Email" />
-        </div>
-        <div class="button-container">
-            <button class="btn btn-success" (click)="updateClient()">Salva</button>
-            <button class="btn btn-secondary" (click)="cancelEdit()">Annulla</button>
-        </div>
+      <div class="mb-3">
+          <label for="edit-email">Modifica Email:</label>
+          <input id="edit-email" [(ngModel)]="editingClient.email" class="form-control" placeholder="Modifica Email" />
+      </div>
+      <div class="button-container">
+          <button class="btn btn-success" (click)="updateClient()">Salva</button>
+          <button class="btn btn-secondary" (click)="cancelEdit()">Annulla</button>
       </div>
     </div>
-  
-    <p *ngIf="clients.length === 0" class="text-center text-muted">Nessun cliente trovato</p>
+  </div>
+
+  <p *ngIf="clients.length === 0" class="text-center text-muted">Nessun cliente trovato</p>
 </div>
