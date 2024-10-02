@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin",
+      "token": "12345"
+    },
+    {
+      "id": "2",
+      "username": "user1",
+      "password": "password1",
+      "token": "67890"
+    },
+    {
+      "id": "3",
+      "username": "user2",
+      "password": "password2",
+      "token": "09876"
+    }
+  ],
+  "clients": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "af41",
+      "name": "dsadsa123",
+      "email": "adasdass"
+    }
+  ]
+}

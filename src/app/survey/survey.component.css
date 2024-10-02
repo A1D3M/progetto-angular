@@ -1,0 +1,46 @@
+/* Contenitore del sondaggio */
+.survey-container {
+    max-width: 600px;        /* Larghezza massima del contenitore */
+    margin: 20px auto;       /* Centratura del contenitore */
+    padding: 20px;           /* Padding interno */
+    border: 1px solid #ccc;  /* Bordo grigio chiaro */
+    border-radius: 8px;      /* Angoli arrotondati */
+    background-color: #f9f9f9; /* Colore di sfondo chiaro */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Titolo del sondaggio */
+.survey-container h2 {
+    text-align: center;      /* Allineamento centrale */
+    color: #3f51b5;         /* Colore del titolo */
+}
+
+/* Titoli dei servizi */
+.survey-container h3 {
+    margin-top: 20px;       /* Margine superiore */
+    color: #333;            /* Colore grigio scuro */
+}
+
+/* Stili per i pulsanti */
+.survey-container button {
+    margin-right: 10px;     /* Margine a destra per separare i pulsanti */
+    margin-top: 10px;       /* Margine superiore per spaziatura verticale */
+}
+
+/* Riepilogo finale */
+.survey-container ul {
+    list-style-type: none;   /* Rimuove i puntini della lista */
+    padding: 0;              /* Rimuove il padding */
+}
+
+.survey-container li {
+    margin: 5px 0;          /* Margine verticale per ogni elemento della lista */
+    font-weight: bold;       /* Grassetto per evidenziare i risultati */
+}
+
+/* Messaggio di completamento */
+.survey-container p {
+    text-align: center;      /* Allineamento centrale */
+    color: #e64a19;          /* Colore rosso per messaggi di avviso */
+    font-weight: bold;       /* Grassetto per il messaggio */
+}

@@ -1,0 +1,28 @@
+/* Stili per la toolbar */
+mat-toolbar {
+    background-color: #3f51b5; /* Colore di sfondo */
+    color: white;              /* Colore del testo */
+    padding: 0 16px;          /* Padding orizzontale */
+    display: flex;             /* Flexbox per allineare gli elementi */
+    justify-content: space-between; /* Spaziatura tra i collegamenti */
+}
+
+/* Stili per i link */
+mat-toolbar a {
+    color: white;             /* Colore dei link */
+    text-decoration: none;    /* Nessuna sottolineatura */
+    padding: 10px 15px;      /* Padding per i link */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+/* Effetto hover per i link */
+mat-toolbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Colore di sfondo al passaggio del mouse */
+    border-radius: 4px; /* Angoli arrotondati */
+}
+
+/* Stili per il router-outlet */
+router-outlet {
+    display: block;         /* Rendi il router outlet un blocco */
+    padding: 16px;         /* Padding per il contenuto del router outlet */
+}

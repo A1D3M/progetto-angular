@@ -1,0 +1,22 @@
+
+<div class="survey-container">
+    <h2>Sondaggio sulla Soddisfazione</h2>
+  
+    <div *ngFor="let service of services">
+      <h3>{{ service }}</h3>
+      <button mat-raised-button color="primary" (click)="rate(service, true)">Sì</button>
+      <button mat-raised-button color="warn" (click)="rate(service, false)">No</button>
+    </div>
+  
+    <div *ngIf="isSurveyComplete()">
+      <h3>Risultati del Sondaggio:</h3>
+      <ul>
+        <li *ngFor="let service of services">
+          {{ service }}: {{ votes[service] }}
+        </li>
+      </ul>
+    </div>
+  
+    <p *ngIf="!isSurveyComplete()">Per favore, completa il sondaggio per tutti i servizi.</p>
+  </div>
+  

@@ -1,0 +1,100 @@
+/* Stile per il contenitore della gestione dei clienti */
+.client-management {
+    max-width: 600px; /* Larghezza massima del contenitore */
+    margin: 20px auto; /* Margine automatico per centrare il contenitore */
+    padding: 20px; /* Padding interno */
+    background-color: #ffffff; /* Colore di sfondo bianco */
+    border-radius: 8px; /* Bordo arrotondato */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+}
+
+/* Stile per il titolo del modulo */
+.client-management h2 {
+    text-align: center; /* Centra il titolo */
+    color: #333; /* Colore del testo */
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+/* Stile per il modulo di aggiunta cliente */
+.client-management form {
+    display: flex; /* Usa Flexbox per allineare gli input */
+    flex-direction: column; /* Allinea gli input in colonna */
+    gap: 10px; /* Spazio tra gli input */
+    margin-bottom: 20px; /* Margine inferiore per distanziare dalla lista dei clienti */
+}
+
+/* Stile per gli input */
+.client-management input[type="text"],
+.client-management input[type="email"] {
+    padding: 10px; /* Padding interno */
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Bordo arrotondato */
+    box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+}
+
+/* Stile per il bottone di aggiunta cliente */
+.client-management button {
+    padding: 10px; /* Padding interno */
+    background-color: blue; 
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuove il bordo */
+    border-radius: 4px; /* Bordo arrotondato */
+    font-size: 16px; /* Dimensione del font */
+    cursor: pointer; /* Cambia il cursore a mano */
+    transition: background-color 0.3s ease; /* Transizione per il cambio di colore */
+}
+
+/* Effetto hover per il bottone di aggiunta cliente */
+.client-management button:hover {
+    background-color: #218838; /* Colore di sfondo verde scuro al passaggio del mouse */
+}
+
+/* Stile per ogni cliente nella lista */
+.client-management div {
+    margin: 10px 0; /* Margine verticale per distanziare i clienti */
+    padding: 10px; /* Padding interno */
+    border: 1px solid #eee; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Bordo arrotondato */
+    background-color: #f9f9f9; /* Colore di sfondo grigio chiaro */
+}
+
+/* Contenitore per i bottoni di modifica ed eliminazione */
+.client-management .button-container {
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centra i bottoni */
+    margin-top: 10px; /* Margine superiore per distanziare dai contenuti */
+}
+
+/* Stile per i bottoni di modifica ed eliminazione */
+.client-management .button-container button {
+    padding: 5px 10px; /* Padding interno */
+    margin: 0 5px; /* Margine orizzontale per distanziare i bottoni */
+    background-color: #007bff; /* Colore di sfondo blu */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuove il bordo */
+    border-radius: 4px; /* Bordo arrotondato */
+    font-size: 14px; /* Dimensione del font */
+    cursor: pointer; /* Cambia il cursore a mano */
+    transition: background-color 0.3s ease; /* Transizione per il cambio di colore */
+}
+
+/* Effetto hover per i bottoni di modifica ed eliminazione */
+.client-management .button-container button:hover {
+    background-color: #0056b3; /* Colore di sfondo blu scuro al passaggio del mouse */
+}
+
+/* Stile per il messaggio di nessun cliente trovato */
+.client-management p {
+    text-align: center; /* Centra il messaggio */
+    color: #777; /* Colore del testo grigio scuro */
+}
+
+/* Stile per il bottone di eliminazione */
+.client-management .button-container button.delete-button {
+    background-color: #dc3545; /* Colore di sfondo rosso */
+}
+
+/* Effetto hover per il bottone di eliminazione */
+.client-management .button-container button.delete-button:hover {
+    background-color: #c82333; /* Colore di sfondo rosso scuro al passaggio del mouse */
+}
